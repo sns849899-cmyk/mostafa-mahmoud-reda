@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -9,16 +10,19 @@
 <style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#0f172a;
+    font-family:Arial,sans-serif;
     color:white;
     line-height:1.9;
     text-align:center;
+    background-image:url("https://images.unsplash.com/photo-1512632578888-169bbbc64f33");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
 header{
     padding:20px;
-    background:#111827;
+    background:rgba(17,24,39,0.9);
 }
 
 h1{
@@ -34,7 +38,7 @@ main{
 .box{
     max-width:900px;
     margin:auto;
-    background:#1e293b;
+    background:rgba(30,41,59,0.92);
     padding:20px;
     border-radius:15px;
 }
@@ -63,8 +67,8 @@ audio{
 input{
     width:80%;
     padding:10px;
-    border-radius:10px;
     border:none;
+    border-radius:10px;
 }
 
 button{
@@ -78,7 +82,7 @@ button{
 
 footer{
     padding:15px;
-    background:#111827;
+    background:rgba(17,24,39,0.9);
     font-size:14px;
     color:#cbd5e1;
 }
@@ -94,64 +98,93 @@ footer{
 <main>
 <div class="box">
 
-    <!-- البحث -->
-    <section>
-        <h2>🔍 بحث عن صور</h2>
-        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - اسلام">
-        <br>
-        <button onclick="searchImages()">بحث</button>
-        <div id="results"></div>
-    </section>
+<section>
+    <h2>🔍 بحث عن صور</h2>
+    <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - اسلام">
+    <br>
+    <button onclick="searchImages()">بحث</button>
+    <div id="results"></div>
+</section>
 
-    <!-- الفاتحة -->
-    <section>
-        <h2>سورة الفاتحة</h2>
-        <audio controls>
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">
-        </audio>
-    </section>
+<section>
+    <h2>سورة الفاتحة</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/001.mp3">
+    </audio>
+</section>
 
-    <!-- الإخلاص -->
-    <section>
-        <h2>سورة الإخلاص</h2>
-        <audio controls>
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3">
-        </audio>
-    </section>
+<section>
+    <h2>سورة الإخلاص</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/112.mp3">
+    </audio>
+</section>
 
-    <!-- الفلق -->
-    <section>
-        <h2>سورة الفلق</h2>
-        <audio controls>
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/113.mp3">
-        </audio>
-    </section>
+<section>
+    <h2>سورة الفلق</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/113.mp3">
+    </audio>
+</section>
 
-    <!-- الناس -->
-    <section>
-        <h2>سورة الناس</h2>
-        <audio controls>
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3">
-        </audio>
-    </section>
+<section>
+    <h2>سورة الناس</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/114.mp3">
+    </audio>
+</section>
 
-    <!-- سورة البقرة -->
-    <section>
-        <h2>سورة البقرة (كاملة بصوت القارئ)</h2>
-        <audio controls>
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3">
-        </audio>
-    </section>
+<section>
+    <h2>سورة البقرة</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/002.mp3">
+    </audio>
+</section>
 
-    <!-- صور طويلة -->
-    <section>
-        <h2>🖼️ صور طويلة</h2>
+<section>
+    <h2>سورة الكهف</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/018.mp3">
+    </audio>
+</section>
 
-        <img loading="lazy" src="https://source.unsplash.com/600x900/?mosque">
-        <img loading="lazy" src="https://source.unsplash.com/600x900/?quran">
-        <img loading="lazy" src="https://source.unsplash.com/600x900/?islamic">
-        <img loading="lazy" src="https://source.unsplash.com/600x900/?islam,night">
-    </section>
+<section>
+    <h2>سورة التوبة</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/009.mp3">
+    </audio>
+</section>
+
+<section>
+    <h2>سورة النحل</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/016.mp3">
+    </audio>
+</section>
+
+<section>
+    <h2>سورة يس</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/036.mp3">
+    </audio>
+</section>
+
+<section>
+    <h2>سورة الزلزلة</h2>
+    <audio controls>
+        <source src="https://download.quranicaudio.com/quran/yasser_al_dossari/099.mp3">
+    </audio>
+</section>
+
+<section>
+    <h2>🖼️ صور إسلامية</h2>
+
+    <img loading="lazy" src="https://source.unsplash.com/600x900/?mosque">
+    <img loading="lazy" src="https://source.unsplash.com/600x900/?quran">
+    <img loading="lazy" src="https://source.unsplash.com/600x900/?islamic">
+    <img loading="lazy" src="https://source.unsplash.com/600x900/?mecca">
+    <img loading="lazy" src="https://source.unsplash.com/600x900/?makkah">
+</section>
 
 </div>
 </main>
@@ -181,3 +214,4 @@ function searchImages(){
 
 </body>
 </html>
+```

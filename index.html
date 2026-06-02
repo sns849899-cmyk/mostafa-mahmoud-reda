@@ -3,20 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>موقع مصطفى محمود رضا علي مرسي</title>
+
+<title>موقع مصطفى محمود رضا علي مرسي والي</title>
 
 <style>
 body{
+    margin:0;
     font-family: Arial, sans-serif;
     background:#0f172a;
     color:white;
+    line-height:1.9;
     text-align:center;
+}
+
+header{
     padding:20px;
-    line-height:2;
+    background:#111827;
 }
 
 h1{
     color:#ffd700;
+    margin:0;
+    font-size:22px;
+}
+
+main{
+    padding:20px;
 }
 
 .box{
@@ -27,75 +39,170 @@ h1{
     border-radius:15px;
 }
 
+section{
+    margin-bottom:35px;
+    padding-bottom:20px;
+    border-bottom:1px solid #334155;
+}
+
+h2{
+    color:#fbbf24;
+}
+
 img{
-    display:block;
-    margin:15px auto;
-}
-
-.cow{
-    width:100%;
-    max-width:450px;
-    border-radius:15px;
-}
-
-.reader{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:4px solid gold;
-    object-fit:cover;
+    max-width:100%;
+    border-radius:10px;
+    margin:10px 0;
 }
 
 audio{
     width:100%;
-    margin:15px 0;
+    margin:10px 0;
 }
 
-hr{
-    border:1px solid #334155;
-    margin:30px 0;
+input{
+    width:80%;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#fbbf24;
+    cursor:pointer;
+}
+
+.verse{
+    margin-top:10px;
+    color:#e2e8f0;
+}
+
+footer{
+    padding:15px;
+    background:#111827;
+    font-size:14px;
+    color:#cbd5e1;
 }
 </style>
 </head>
 
 <body>
 
-<h1>موقع مصطفى محمود رضا علي مرسي</h1>
+<header>
+    <h1>موقع مصطفى محمود رضا علي مرسي والي</h1>
+</header>
 
+<main>
 <div class="box">
 
-<!-- أدعية السفر -->
-<h2>أدعية السفر - بصوت الشيخ مشاري العفاسي</h2>
+    <!-- 🔍 البحث عن الصور -->
+    <section>
+        <h2>🔍 بحث عن صور</h2>
 
-<img class="reader"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mishary_Rashid_Alafasy.jpg/320px-Mishary_Rashid_Alafasy.jpg"
-alt="الشيخ مشاري">
+        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - سور...">
 
-<audio controls>
-<source src="https://server7.mp3quran.net/afs/duaa_safar.mp3" type="audio/mpeg">
-</audio>
+        <br>
 
-<p>
-اللهم إنا نسألك في سفرنا هذا البر والتقوى، ومن العمل ما ترضى<br>
-اللهم هون علينا سفرنا هذا واطوِ عنا بعده<br>
-اللهم أنت الصاحب في السفر والخليفة في الأهل<br>
-اللهم إنا نعوذ بك من وعثاء السفر وكآبة المنظر وسوء المنقلب في المال والأهل
-</p>
+        <button onclick="searchImages()">بحث</button>
 
-<hr>
+        <div id="results"></div>
+    </section>
 
-<!-- سورة البقرة + صورة -->
-<h2>سورة البقرة - بصوت الشيخ مشاري العفاسي</h2>
+    <!-- الفاتحة -->
+    <section>
+        <h2>سورة الفاتحة</h2>
 
-<img class="cow"
-src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Cow_face.jpg"
-alt="صورة بقرة">
+        <audio controls preload="none">
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">
+        </audio>
 
-<audio controls>
-<source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3" type="audio/mpeg">
-</audio>
+        <p class="verse">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
+        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
+        الرَّحْمَٰنِ الرَّحِيمِ<br>
+        مَالِكِ يَوْمِ الدِّينِ
+        </p>
+    </section>
+
+    <!-- الإخلاص -->
+    <section>
+        <h2>سورة الإخلاص</h2>
+
+        <audio controls preload="none">
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3">
+        </audio>
+
+        <p class="verse">
+        قُلْ هُوَ اللَّهُ أَحَدٌ<br>
+        اللَّهُ الصَّمَدُ<br>
+        لَمْ يَلِدْ وَلَمْ يُولَدْ<br>
+        وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
+        </p>
+    </section>
+
+    <!-- الفلق -->
+    <section>
+        <h2>سورة الفلق</h2>
+
+        <audio controls preload="none">
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/113.mp3">
+        </audio>
+
+        <p class="verse">
+        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ<br>
+        مِن شَرِّ مَا خَلَقَ<br>
+        وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ<br>
+        وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ<br>
+        وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
+        </p>
+    </section>
+
+    <!-- الناس -->
+    <section>
+        <h2>سورة الناس</h2>
+
+        <audio controls preload="none">
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3">
+        </audio>
+
+        <p class="verse">
+        قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br>
+        مَلِكِ النَّاسِ<br>
+        إِلَٰهِ النَّاسِ<br>
+        مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ
+        </p>
+    </section>
 
 </div>
+</main>
+
+<footer>
+    © موقع مصطفى محمود رضا علي مرسي والي
+</footer>
+
+<script>
+function searchImages(){
+    let query = document.getElementById("searchBox").value;
+    let results = document.getElementById("results");
+
+    if(query.trim() === ""){
+        results.innerHTML = "<p>اكتب كلمة للبحث</p>";
+        return;
+    }
+
+    results.innerHTML = `
+        <p>نتائج البحث عن: <b>${query}</b></p>
+
+        <img src="https://source.unsplash.com/600x400/?${query},islam">
+        <img src="https://source.unsplash.com/600x400/?${query}">
+        <img src="https://source.unsplash.com/600x400/?mosque,${query}">
+    `;
+}
+</script>
 
 </body>
 </html>

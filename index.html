@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>موقع مصطفى محمود رضا علي مرسي والي</title>
+<title>موقع مصطفى محمود</title>
 
 <style>
 body{
@@ -76,11 +76,6 @@ button{
     cursor:pointer;
 }
 
-.verse{
-    margin-top:10px;
-    color:#e2e8f0;
-}
-
 footer{
     padding:15px;
     background:#111827;
@@ -93,95 +88,76 @@ footer{
 <body>
 
 <header>
-    <h1>موقع مصطفى محمود رضا علي مرسي والي</h1>
+    <h1>موقع مصطفى محمود</h1>
 </header>
 
 <main>
 <div class="box">
 
-    <!-- 🔍 البحث عن الصور -->
+    <!-- البحث -->
     <section>
         <h2>🔍 بحث عن صور</h2>
-
-        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - سور...">
-
+        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - اسلام">
         <br>
-
         <button onclick="searchImages()">بحث</button>
-
         <div id="results"></div>
     </section>
 
     <!-- الفاتحة -->
     <section>
         <h2>سورة الفاتحة</h2>
-
-        <audio controls preload="none">
+        <audio controls>
             <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">
         </audio>
-
-        <p class="verse">
-        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
-        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
-        الرَّحْمَٰنِ الرَّحِيمِ<br>
-        مَالِكِ يَوْمِ الدِّينِ
-        </p>
     </section>
 
     <!-- الإخلاص -->
     <section>
         <h2>سورة الإخلاص</h2>
-
-        <audio controls preload="none">
+        <audio controls>
             <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3">
         </audio>
-
-        <p class="verse">
-        قُلْ هُوَ اللَّهُ أَحَدٌ<br>
-        اللَّهُ الصَّمَدُ<br>
-        لَمْ يَلِدْ وَلَمْ يُولَدْ<br>
-        وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
-        </p>
     </section>
 
     <!-- الفلق -->
     <section>
         <h2>سورة الفلق</h2>
-
-        <audio controls preload="none">
+        <audio controls>
             <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/113.mp3">
         </audio>
-
-        <p class="verse">
-        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ<br>
-        مِن شَرِّ مَا خَلَقَ<br>
-        وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ<br>
-        وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ<br>
-        وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
-        </p>
     </section>
 
     <!-- الناس -->
     <section>
         <h2>سورة الناس</h2>
-
-        <audio controls preload="none">
+        <audio controls>
             <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3">
         </audio>
+    </section>
 
-        <p class="verse">
-        قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br>
-        مَلِكِ النَّاسِ<br>
-        إِلَٰهِ النَّاسِ<br>
-        مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ
-        </p>
+    <!-- سورة البقرة -->
+    <section>
+        <h2>سورة البقرة (كاملة بصوت القارئ)</h2>
+        <audio controls>
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3">
+        </audio>
+    </section>
+
+    <!-- صور طويلة -->
+    <section>
+        <h2>🖼️ صور طويلة</h2>
+
+        <img loading="lazy" src="https://source.unsplash.com/600x900/?mosque">
+        <img loading="lazy" src="https://source.unsplash.com/600x900/?quran">
+        <img loading="lazy" src="https://source.unsplash.com/600x900/?islamic">
+        <img loading="lazy" src="https://source.unsplash.com/600x900/?islam,night">
     </section>
 
 </div>
 </main>
 
 <footer>
-    © موقع مصطفى محمود رضا علي مرسي والي
+    © موقع مصطفى محمود
 </footer>
 
 <script>
@@ -196,10 +172,9 @@ function searchImages(){
 
     results.innerHTML = `
         <p>نتائج البحث عن: <b>${query}</b></p>
-
-        <img src="https://source.unsplash.com/600x400/?${query},islam">
         <img src="https://source.unsplash.com/600x400/?${query}">
         <img src="https://source.unsplash.com/600x400/?mosque,${query}">
+        <img src="https://source.unsplash.com/600x400/?islam,${query}">
     `;
 }
 </script>

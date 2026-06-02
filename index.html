@@ -4,16 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>موقع مصطفى محمود رضا علي مرسي والي</title>
+<title> موقع مصطفي محمود رضا علي مرسي واليtitle>
 
 <style>
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#0f172a;
     color:white;
     line-height:1.9;
     text-align:center;
+
+    /* 🕌 خلفية شيخ */
+    background: url("https://images.unsplash.com/photo-1609599006353-e629aaabfeae") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* 🔳 تغميق + وضوح */
+body::before{
+    content:"";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(2px);
+    z-index:-1;
 }
 
 header{
@@ -49,12 +66,6 @@ h2{
     color:#fbbf24;
 }
 
-img{
-    max-width:100%;
-    border-radius:10px;
-    margin:10px 0;
-}
-
 audio{
     width:100%;
     margin:10px 0;
@@ -76,6 +87,16 @@ button{
     cursor:pointer;
 }
 
+button:hover{
+    background:#eab308;
+}
+
+img{
+    max-width:100%;
+    border-radius:10px;
+    margin:10px 0;
+}
+
 .verse{
     margin-top:10px;
     color:#e2e8f0;
@@ -93,87 +114,66 @@ footer{
 <body>
 
 <header>
-    <h1>موقع مصطفى محمود رضا علي مرسي والي</h1>
+    <h1>موقع إسلامي</h1>
 </header>
 
 <main>
 <div class="box">
 
-    <!-- 🔍 البحث عن الصور -->
+    <!-- 🔍 بحث صور -->
     <section>
         <h2>🔍 بحث عن صور</h2>
 
-        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة - سور...">
+        <input type="text" id="searchBox" placeholder="اكتب: مسجد - قرآن - مكة...">
 
         <br>
-
         <button onclick="searchImages()">بحث</button>
 
         <div id="results"></div>
     </section>
 
-    <!-- الفاتحة -->
-    <section>
-        <h2>سورة الفاتحة</h2>
-
-        <audio controls preload="none">
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">
-        </audio>
-
-        <p class="verse">
-        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
-        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
-        الرَّحْمَٰنِ الرَّحِيمِ<br>
-        مَالِكِ يَوْمِ الدِّينِ
-        </p>
+    <!-- السور -->
+    <section><h2>سورة الفاتحة</h2>
+        <audio controls><source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3"></audio>
     </section>
 
-    <!-- الإخلاص -->
-    <section>
-        <h2>سورة الإخلاص</h2>
-
-        <audio controls preload="none">
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3">
-        </audio>
-
-        <p class="verse">
-        قُلْ هُوَ اللَّهُ أَحَدٌ<br>
-        اللَّهُ الصَّمَدُ<br>
-        لَمْ يَلِدْ وَلَمْ يُولَدْ<br>
-        وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
-        </p>
+    <section><h2>سورة الإخلاص</h2>
+        <audio controls><source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/112.mp3"></audio>
     </section>
 
-    <!-- الفلق -->
-    <section>
-        <h2>سورة الفلق</h2>
-
-        <audio controls preload="none">
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/113.mp3">
-        </audio>
-
-        <p class="verse">
-        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ<br>
-        مِن شَرِّ مَا خَلَقَ<br>
-        وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ<br>
-        وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ<br>
-        وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
-        </p>
+    <section><h2>سورة الفلق</h2>
+        <audio controls><source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/113.mp3"></audio>
     </section>
 
-    <!-- الناس -->
+    <section><h2>سورة الناس</h2>
+        <audio controls><source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3"></audio>
+    </section>
+
+    <section><h2>سورة البقرة</h2>
+        <audio controls><source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3"></audio>
+    </section>
+
+    <!-- أدعية -->
     <section>
-        <h2>سورة الناس</h2>
+        <h2>أدعية السفر</h2>
+        <p class="verse">اللهم إنا نسألك في سفرنا هذا البر والتقوى...</p>
+    </section>
 
-        <audio controls preload="none">
-            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/114.mp3">
-        </audio>
+    <section>
+        <h2>أدعية قبل النوم</h2>
+        <p class="verse">باسمك اللهم أموت وأحيا</p>
+    </section>
 
+    <section>
+        <h2>أدعية بعد الاستيقاظ</h2>
+        <p class="verse">الحمد لله الذي أحيانا بعد ما أماتنا</p>
+    </section>
+
+    <section>
+        <h2>أدعية قبل وبعد الأكل</h2>
         <p class="verse">
-        قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br>
-        مَلِكِ النَّاسِ<br>
-        إِلَٰهِ النَّاسِ<br>
-        مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ
+            قبل الأكل: بسم الله<br>
+            بعد الأكل: الحمد لله الذي أطعمنا وسقانا
         </p>
     </section>
 
@@ -181,7 +181,7 @@ footer{
 </main>
 
 <footer>
-    © موقع مصطفى محمود رضا علي مرسي والي
+    © موقع إسلامي
 </footer>
 
 <script>
@@ -194,12 +194,14 @@ function searchImages(){
         return;
     }
 
-    results.innerHTML = `
-        <p>نتائج البحث عن: <b>${query}</b></p>
+    let safeQuery = query.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-        <img src="https://source.unsplash.com/600x400/?${query},islam">
-        <img src="https://source.unsplash.com/600x400/?${query}">
-        <img src="https://source.unsplash.com/600x400/?mosque,${query}">
+    results.innerHTML = `
+        <p>نتائج البحث عن: <b>${safeQuery}</b></p>
+
+        <img src="https://source.unsplash.com/600x400/?${encodeURIComponent(query)},mosque">
+        <img src="https://source.unsplash.com/600x400/?${encodeURIComponent(query)}">
+        <img src="https://source.unsplash.com/600x400/?islam,${encodeURIComponent(query)}">
     `;
 }
 </script>

